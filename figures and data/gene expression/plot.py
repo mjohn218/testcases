@@ -51,24 +51,21 @@ smoldyn_r = gene_data["smol_osci_r"]
 mcell_r = gene_data["mcelldat_r"]
 
 fig, ax = plt.subplots()
-ax.plot(time, ode_r, label='R, ODE', color='tab:blue')
-ax.plot(time, ode_a, label='A, ODE',color='tab:blue', linestyle=linestyles['densely dotted'],)
-ax.plot(time, smoldyn_r, label='R, Smoldyn', color='tab:orange')
-ax.plot(time, smoldyn_a,color='tab:orange', label='A, Smoldyn', linestyle=linestyles['densely dotted'],)
+ax.plot(time, ode_r, label='R, ODE', color='tab:orange')
+ax.plot(time, ode_a, label='A, ODE',color='tab:blue',)
+ax.plot(time, smoldyn_r, label='R, Smoldyn', color='tab:orange', linestyle=linestyles['densely dotted'],)
+ax.plot(time, smoldyn_a,color='tab:blue', label='A, Smoldyn', linestyle=linestyles['densely dotted'],)
 plt.legend(loc=9, labelspacing = 0.3, ncol =2)
 plt.xlabel('time [s]');
 plt.ylabel('N(t)');
 plt.xlim(0, 100)
 plt.ylim(0, 1900)
 
-#plt.savefig("gene_expression.pdf",bbox_inches='tight', dpi = 400)
-#plt.savefig("gene_expression.svg",bbox_inches='tight', dpi = 400)
+plt.savefig("gene_expression.pdf",bbox_inches='tight', dpi = 400)
+plt.savefig("gene_expression.svg",bbox_inches='tight', dpi = 400)
 
 
 #%%
-
-########## Plot gene expression ##########
-
 
 ########## Plot gene expression ##########
 
