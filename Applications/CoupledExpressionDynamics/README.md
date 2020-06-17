@@ -77,6 +77,7 @@ the genes for A and R were both centered in a sphere of R=0.1um, still with a si
 prmA = 1 molecule, New localized Conc.=0.3964uM
 prmR = 1 molecule, New Localized Conc.=0.3964uM
 
+
 # diffusion
 The genes were uniform in this subvolume, and no barrier to them existed. 
 prmA: D=0.0um^2/s
@@ -85,6 +86,13 @@ prmR: D=0.0um^2/s
 prmR_bound: D=0.0um^2/s
 
 They could not diffuse, however. 
+
+# DECAY R set to 0.05:
+In this case, no oscillations occur in a deterministic model. They occur in a stochastic sim. The significantly longer oscillation time is due to the much slower decay of the R, the spike in A is not so different. 
+NERDSS:
+|NERDSS FPR (1traj, 1000s 16 peaks) | 63s+/-2.8 (SEM) | 63s+/-2.8s (SEM) | 7.6+/- 0.3s (SEM) |
+
+
 # results
 The results from the PDE are essentialy unchanged. There is a very small decrease in the height of the A and R oscillations, but it could probably be attributed to the numerical issues associatied with the coarse mesh (~0.1um). The difference between the copies of A or R proteins in the center, versus on the periphery, are barely distinguishable, see Figure: AR_oscillations_vsTime_PDE_centeredGenes.eps
 
