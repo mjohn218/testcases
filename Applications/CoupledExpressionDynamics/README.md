@@ -53,17 +53,19 @@ These were calculated in two ways.
 # Table
 |  | A wavelength | R wavelength | A-R lagtime (Cross-correlation) |
 |---|---|---|---|
-|1. ODE & PDE (1 traj, 8 peaks) | 25.2s (std:0.4) | 25.1s  (std:0.2) | 6s (std:0.27) |
+|1. ODE (1 traj, 8 peaks) | 25.2s +/- 0.1 SEM | 25.1s +/- 0.1 SEM | 6s +/-0.1 SEM |
 |2. ODE & PDE FFT Mode <br> (1 traj, 8peaks, 200s+zeropad to 5000s) | 25.12s | 25.12s | 6.55s |
-|1. SSA (10 traj: 74 and 72 peaks) | 25s (std:3.6) | 25s (std:3.5) | 5.98s (std:0.7) | 
+|1. PDE (1 traj, 8 peaks) | 25.3s +/- 0.2 SEM | 25s +/- 0 SEM | 5.9s +/-0.2 SEM |
+|1. SSA (10 traj: 74 and 72 peaks) | 25s +/- 0.4 SEM | 25s +/-0.4SEM | 5.98s +/- 0.1 SEM | 
 |2. SSA  (10 traj, 200s +zeropad to 5000s) FFT Mode | 24.8s | 25.1s | 6.63s | 
-|1. Smoldyn  (1traj) | 25.9s   (std:3.7) | 25.6s (std:3.7) | 5.62s (std:0.74) | 
+|1. Smoldyn  (1traj 8 peaks) | 25.9s   +/- 1.3s SEM | 25.6s +/- 1.3s SEM | 5.62s +/- 0.3 SEM | 
 |2. Smoldyn (1traj, 200s + zeropad to 5000s) FFT | 26.6s | 26.3s | 6.3s | 
-|1. Mcell (1traj) | 21.75s (std:1.9) | 21.6s (std:1.8) | 5.89s (std:1.1) | 
+|1. Mcell (1traj, 9peaks) | 21.8s+/- 0.7 SEM | 21.8s +/- 0.7 SEM | 6.3s+/- 0.4 SEM| 
 |2. Mcell  (1traj, 200s + zeropad to 5000s) FFT | 21.8s | 21.8s | 6.64ss | 
 |1. FPR (t traj, 9 peaks) | 23.9s (std:2.15) | 23.8s (std:2.5) | 5.9s (std:0.8) | 
 |2. FPR (1traj, 200s+zeropad to 5000s) FFT | 24.5s | 24.75s | 6.45s | 
 |3. FPR (1traj, 1000s+zeropad to 5000s) FFT | 24.3s | 24.3s | 6.45s | 
+|4. FPR (1traj, 1000s 42 peaks) | 23.6s+/-0.6 (SEM) | 23.6s+/0.6s (SEM) | 5.9s+/-0.1s (SEM) |
 
 
 
