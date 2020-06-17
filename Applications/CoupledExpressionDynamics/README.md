@@ -60,7 +60,7 @@ These were calculated in two ways.
 |2. SSA  (10 traj, 200s +zeropad to 5000s) FFT Mode | 24.8s | 25.1s | 6.63s | 
 |1. Smoldyn  (1traj 8 peaks) | 25.9s   +/- 1.3s SEM | 25.6s +/- 1.3s SEM | 5.62s +/- 0.3 SEM | 
 |2. Smoldyn (1traj, 200s + zeropad to 5000s) FFT | 26.6s | 26.3s | 6.3s | 
-|1. Mcell (1traj) | 21.75s (std:1.9) | 21.6s (std:1.8) | 5.89s (std:1.1) | 
+|1. Mcell (1traj, 9peaks) | 21.8s+/- 0.7 SEM | 21.8s +/- 0.7 SEM | 6.3s+/- 0.4 SEM| 
 |2. Mcell  (1traj, 200s + zeropad to 5000s) FFT | 21.8s | 21.8s | 6.64ss | 
 |1. FPR (t traj, 9 peaks) | 23.9s (std:2.15) | 23.8s (std:2.5) | 5.9s (std:0.8) | 
 |2. FPR (1traj, 200s+zeropad to 5000s) FFT | 24.5s | 24.75s | 6.45s | 
