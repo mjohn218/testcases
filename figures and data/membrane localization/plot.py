@@ -39,12 +39,12 @@ plt.gcf().set_size_inches(default_x, default_y)
 
 #%%
 ## load data ##
-ode_mem = np.loadtxt('Vcell/ode large.txt', skiprows=1)
+ode_mem = np.loadtxt('new_run/ODE.txt', skiprows=1)
 ode_mem[:,1:9] *= 0.2209
 
-pde_mem = np.loadtxt('Vcell/pde large.txt', skiprows=1)
+pde_mem = np.loadtxt('new_run/PDE.txt', skiprows=1)
 
-ssa_mem = np.loadtxt('Vcell/SSA_mem_loc large/SSA_MA_MB_large.txt', delimiter=',')
+ssa_mem = np.loadtxt('new_run/SSA_MA_MB.txt', delimiter=',')
 
 smoldyn_mem = np.loadtxt('Smoldyn_MA_MB_large.txt', delimiter=',')
 
