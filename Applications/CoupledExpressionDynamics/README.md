@@ -86,6 +86,19 @@ prmR: D=0.0um^2/s
 prmR_bound: D=0.0um^2/s
 
 They could not diffuse, however. 
+# Sim 1:
+DA=5, DR=50, DRNA/R=5
+Periphery
+|P. PDE (1 traj, 9 peaks) | 24.5s +/- 0.3 SEM | 24.3s +/- 0.1 SEM | 5.9s +/-0.2 SEM |
+Center
+|C. PDE (1 traj, 9 peaks) | 24.5s +/- 0.3 SEM | 24.3s +/- 0.1 SEM | 5.9s +/-0.2 SEM |
+
+# Sim 2:
+DA=2, DR=50, DRNA/R=5
+Periphery
+|P. PDE (1 traj, 10 peaks) | 22.6s +/- 0.3 SEM | 22.5s +/- 0.1 SEM | 5.8s +/-0.2 SEM |
+Center
+|C. PDE (1 traj, 10 peaks) | 22.6s +/- 0.3 SEM | 22.5s +/- 0.1 SEM | 5.8s +/-0.2 SEM |
 
 # DECAY R set to 0.05:
 In this case, no oscillations occur in a deterministic model. They occur in a stochastic sim. The significantly longer oscillation time is due to the much slower decay of the R, the spike in A is not so different. 
