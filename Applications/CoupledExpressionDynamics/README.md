@@ -109,9 +109,11 @@ NERDSS:
 # results
 The results from the PDE are essentialy unchanged. There is a very small decrease in the height of the A and R oscillations, but it could probably be attributed to the numerical issues associatied with the coarse mesh (~0.1um). The difference between the copies of A or R proteins in the center, versus on the periphery, are barely distinguishable, see Figure: AR_oscillations_vsTime_PDE_centeredGenes.eps
 
+However, with slower D_A, The A copies did start to concentrate more in the center, a small but visible amount. This result was not sensitive to D_R, only D_A. R showed almsot indistinguishable differences in copy numbers throughout the cell, remaining well mixed for all models. 
+
 Smoldyn was set up for this geometry, but it did not work!
 
 # conclusion
-The overall size of the cell (R=1um) is small enough that having to reach a specific point in the center of the cell to transcribe a gene does not affect the oscillations. 
+The overall size of the cell (R=1um) is small enough that having to reach a specific point in the center of the cell to transcribe a gene does not affect the oscillations, unless D_A is slowed markedly. Oscillations then become faster, due to increased localization of A in the center. 
 
 References: Vilar, J. M.G. et al, Mechanisms of noise-resistance in genetic oscillators. PNAS, 99:5988-5992 (2002).
