@@ -42,7 +42,8 @@ Oscillations are eliminated in deterministic simulations when protein R degradat
 
 # RESULTS:
 For a Volume of 4.189um^3 (Sphere with R=1um), the ODE and PDE give identical results. The stochastic simulations (Gillespie) produce the same average trends in oscillations, results from 10 trajectories of 200s each.  
-Single particle: FPR is very similar to the non-spatial, except slightly shorter time oscillations, with a very similar lag-time. Smoldyn has slightly longer oscillations than FPR and the non-spatial simulators, with a slightly shorter lag-time. 
+Single particle: 
+NERDSS is the same for D=10. In the newer version, unimolecular reactions are treated as a population, which is more accurate than one-at-a-time for fast reactions. dt=10us.  Smoldyn is not significantly differen.
 However, MCELL has distinctly shorter oscillations (of significance), but with a similar lag-time.  
 
 # Statistics: 
@@ -62,11 +63,10 @@ These were calculated in two ways.
 |2. Smoldyn (1traj, 200s + zeropad to 5000s) FFT | 26.6s | 26.3s | 6.3s | 
 |1. Mcell (1traj, 9peaks) | 21.8s+/- 0.7 SEM | 21.8s +/- 0.7 SEM | 6.3s+/- 0.4 SEM| 
 |2. Mcell  (1traj, 200s + zeropad to 5000s) FFT | 21.8s | 21.8s | 6.64ss | 
-|1. FPR (t traj, 9 peaks) | 23.9s (std:2.15) | 23.8s (std:2.5) | 5.9s (std:0.8) | 
-|2. FPR (1traj, 200s+zeropad to 5000s) FFT | 24.5s | 24.75s | 6.45s | 
-|3. FPR (1traj, 1000s+zeropad to 5000s) FFT | 24.3s | 24.3s | 6.45s | 
-|4. FPR (1traj, 1000s 42 peaks) | 23.6s+/-0.6 (SEM) | 23.6s+/0.6s (SEM) | 5.9s+/-0.1s (SEM) |
-
+|1. FPR1 (1traj, 1000s+zeropad to 5000s) FFT | 24.3s | 24.3s | 6.45s | 
+|2. FPR1 (1traj, 1000s 42 peaks) | 23.6s+/-0.6 (SEM) | 23.6s+/0.6s (SEM) | 5.9s+/-0.1s (SEM) |
+|3. NERDSS (1traj, 600s+zeropad to 5000s) FFT | 25.2s | 25.2s | 6.6s | 
+|4. NERDSS (1traj, 600s 26 peaks) | 25.4s+/-0.5 (SEM) | 25.4s+/0.6s (SEM) | 6s+/-0.1s (SEM) |
 
 
 # LOCALIZED PRIMERS:
