@@ -60,7 +60,7 @@ ax.plot(smoldyn_mem[:,0], smoldyn_mem[:,1], linestyle=linestyles['densely dashed
 plt.xlim(0, 2)
 plt.legend(loc=1, labelspacing = 0.3)
 plt.xlabel('time [s]');
-plt.ylabel('AM(t)');
+plt.ylabel('MA(t)');
 
 axins = ax.inset_axes([0.25, 0.6, 0.37, 0.37])
 axins.set_xlim(1.2, 1.75)
@@ -72,8 +72,8 @@ axins.plot(fpr_mem[:,0], fpr_mem[:,1], linestyle=linestyles['densely dashdotdott
 axins.plot(ssa_mem[0,:], ssa_mem[1,:], ':', label='Gillespie', color = 'tab:purple')
 axins.plot(smoldyn_mem[:,0], smoldyn_mem[:,1], linestyle=linestyles['densely dashed'], label = 'Smoldyn', color = 'tab:orange')
 
-plt.savefig("plot_membrane_location.pdf",bbox_inches='tight', dpi = 400)
-plt.savefig("plot_membrane_location.svg",bbox_inches='tight', dpi = 400)
+#plt.savefig("plot_membrane_location.pdf",bbox_inches='tight', dpi = 400)
+#plt.savefig("plot_membrane_location.svg",bbox_inches='tight', dpi = 400)
 
 
 
