@@ -59,8 +59,8 @@ plt.xlabel('time [s]');
 plt.ylabel(r'$\rho_{MinD-ATP} [1/\mu m^2]$');
 plt.gcf().set_size_inches(default_x, default_y)
 
-plt.savefig("Min_pde.svg",bbox_inches='tight', dpi = 400)
-plt.savefig("Min_pde.pdf",bbox_inches='tight', dpi = 400)
+#plt.savefig("Min_pde.svg",bbox_inches='tight', dpi = 400)
+#plt.savefig("Min_pde.pdf",bbox_inches='tight', dpi = 400)
 
 ########## Plot MinCDE Smoldyn ##########
 default_x = 5*1.4*4/9
@@ -84,8 +84,8 @@ ax.set_xticklabels([])
 plt.ylabel(r'$\rho_{MinD-ATP} [1/\mu m^2]$');
 plt.gcf().set_size_inches(default_x, default_y)
 
-plt.savefig("Min_smoldyn.svg",bbox_inches='tight', dpi = 400)
-plt.savefig("Min_smoldyn.pdf",bbox_inches='tight', dpi = 400)
+#plt.savefig("Min_smoldyn.svg",bbox_inches='tight', dpi = 400)
+#plt.savefig("Min_smoldyn.pdf",bbox_inches='tight', dpi = 400)
 
 ########## Plot MinCDE Snapshots ##########
 EminDt_b_pde = np.genfromtxt('Emin_WallOnly__Curves_vars(1)_times(301).csv', delimiter  = ',',skip_header=9)
@@ -120,8 +120,8 @@ default_y = 3*1.4
 plt.gcf().set_size_inches(default_x, default_y)
 plt.subplots_adjust(wspace=0.05)
 
-plt.savefig("PAPER_Min_vs_z_1.svg",bbox_inches='tight', dpi = 400)
-plt.savefig("PAPER_Min_vs_z_1.pdf",bbox_inches='tight', dpi = 400)
+#plt.savefig("PAPER_Min_vs_z_1.svg",bbox_inches='tight', dpi = 400)
+#plt.savefig("PAPER_Min_vs_z_1.pdf",bbox_inches='tight', dpi = 400)
 
 
 

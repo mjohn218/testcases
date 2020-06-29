@@ -49,20 +49,30 @@ ode_r = gene_data["ode_osci_r"]
 smoldyn_a = gene_data["smol_oci_a"]
 smoldyn_r = gene_data["smol_osci_r"]
 mcell_r = gene_data["mcelldat_r"]
+smoldyn2 = np.loadtxt('smoldyn_200s_uniform.dat')
 
-fig, ax = plt.subplots()
-ax.plot(time, ode_r, label='R, ODE', color='tab:orange')
-ax.plot(time, ode_a, label='A, ODE',color='tab:blue',)
-ax.plot(time, smoldyn_r, label='R, Smoldyn', color='tab:orange', linestyle=linestyles['densely dotted'],)
-ax.plot(time, smoldyn_a,color='tab:blue', label='A, Smoldyn', linestyle=linestyles['densely dotted'],)
+fig, ax = plt.subplots(2)
+ax[0].plot(time[0:390], ode_r[0:390], label='R', color='tab:orange')
+ax[0].plot(time, ode_a, label='A',color='tab:blue')
+ax[0].legend(loc=9, labelspacing = 0.3, ncol =2)
+ax[0].set_xlabel('time [s]');
+ax[0].set_ylabel('N(t)');
+ax[0].set_xlim(0, 200)
+ax[0].set_ylim(0, 1900)
+
+#ax[1].plot(time, smoldyn_r, label='R', color='tab:orange')
+#ax[1].plot(time, smoldyn_a,color='tab:blue', label='A')
+ax[1].plot(smoldyn2[:,0], smoldyn2[:,2], label='R', color='tab:orange')
+ax[1].plot(smoldyn2[:,0], smoldyn2[:,1],color='tab:blue', label='A')
 plt.legend(loc=9, labelspacing = 0.3, ncol =2)
-plt.xlabel('time [s]');
-plt.ylabel('N(t)');
-plt.xlim(0, 100)
-plt.ylim(0, 1900)
+ax[1].legend(loc=9, labelspacing = 0.3, ncol =2)
+ax[1].set_xlabel('time [s]');
+ax[1].set_ylabel('N(t)');
+ax[1].set_xlim(0, 200)
+ax[1].set_ylim(0, 1900)
 
-plt.savefig("gene_expression.pdf",bbox_inches='tight', dpi = 400)
-plt.savefig("gene_expression.svg",bbox_inches='tight', dpi = 400)
+#plt.savefig("gene_expression.pdf",bbox_inches='tight', dpi = 400)
+#plt.savefig("gene_expression.svg",bbox_inches='tight', dpi = 400)
 
 
 #%%
@@ -88,5 +98,35 @@ ax.plot(time_smoldyn, smoldyn_a,color='tab:orange', label='A, Smoldyn', linestyl
 plt.legend(loc=9, labelspacing = 0.3, ncol =2)
 plt.xlabel('time [s]');
 plt.ylabel('N(t)');
-plt.xlim(0, 100)
+plt.xlim(0, 200)
 plt.ylim(0, 1900)
+
+#%%
+
+pde_fix = np.genfromtxt('FixedPromoter_DA2_DR50_ARC.csv', delimiter  = ',',skip_header=9)
+
+dist_fix = pde_fix[0,3:27]
+dist_fix[0] = 0
+time_fix = pde_fix[1:202,1]
+Aout = pde_fix[1:202,4]
+Aout = Aout*602.2*4
+Acenter = pde_fix[1:202,14]
+Acenter = Acenter*602.2*4
+
+fig, ax = plt.subplots()
+ax.plot(time, ode_a, label='ODE', color='tab:blue')
+ax.plot(time_fix, Aout, label='PDE, periphery', color='tab:green')
+ax.plot(time_fix, Acenter, label='PDE, center', color='tab:red')
+plt.xlabel('time [s]');
+plt.ylabel('A(t)');
+plt.legend(loc=9, labelspacing = 0.3, ncol =3)
+plt.xlim(0, 200)
+plt.ylim(0, 1700)
+
+default_x = 5*1.4
+default_y = 1.5*1.4
+plt.gcf().set_size_inches(default_x, default_y)
+
+plt.savefig("gene_expression_space.pdf",bbox_inches='tight', dpi = 400)
+plt.savefig("gene_expression_space.svg",bbox_inches='tight', dpi = 400)--
+
